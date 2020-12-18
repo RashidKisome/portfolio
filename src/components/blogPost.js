@@ -3,15 +3,14 @@ import { graphql } from "gatsby"
 import Default from "../components/default"
 import Post from "../components/post"
 import SEO from "../components/seo"
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
-import useSiteMetadata from '../utils/site-metadata';
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-deckDeckGoHighlightElement();
-
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import useSiteMetadata from "../utils/site-metadata"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+deckDeckGoHighlightElement()
 
 const BlogPost = ({ path, data }) => {
   const { markdownRemark } = data
-  const { siteUrl } = useSiteMetadata();
+  const { siteUrl } = useSiteMetadata()
 
   let disqusConfig = {
     url: `${siteUrl}${path}`,
@@ -21,20 +20,21 @@ const BlogPost = ({ path, data }) => {
 
   return (
     <>
-    <SEO
-      title={markdownRemark.frontmatter.title}
-      description={markdownRemark.frontmatter.description}
-      keywords={markdownRemark.frontmatter.keywords}
-    />
-    <Default></Default>
-    <Post 
-      title={markdownRemark.frontmatter.title} 
-      date={markdownRemark.frontmatter.date} >
-      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+      <SEO
+        title={markdownRemark.frontmatter.title}
+        description={markdownRemark.frontmatter.description}
+        keywords={markdownRemark.frontmatter.keywords}
+      />
+      <Default></Default>
+      <Post
+        title={markdownRemark.frontmatter.title}
+        date={markdownRemark.frontmatter.date}
+      >
+        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
 
-      <CommentCount config={disqusConfig} placeholder={'...'} />
-      <Disqus config={disqusConfig} />
-    </Post>
+        {/* <CommentCount config={disqusConfig} placeholder={"..."} />
+        <Disqus config={disqusConfig} /> */}
+      </Post>
     </>
   )
 }

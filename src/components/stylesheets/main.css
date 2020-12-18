@@ -14,7 +14,7 @@ html {
   line-height: 1.5;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Sections
@@ -260,7 +260,6 @@ textarea {
  */
 button,
 input {
-
   /* 1 */
   overflow: visible;
 }
@@ -271,7 +270,6 @@ input {
  */
 button,
 select {
-
   /* 1 */
   text-transform: none;
 }
@@ -924,7 +922,8 @@ pre code {
 .page-article,
 .post {
   margin-bottom: 6rem;
-  box-shadow: 0 50px 110px -40px rgba(86, 119, 119, 0.68), 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 50px 110px -40px rgba(86, 119, 119, 0.68),
+    0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .main-article .header-article,
@@ -1058,6 +1057,29 @@ img.page-img {
   padding: 0.75rem;
   overflow: auto;
 }
+.rashidportfoliopic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 300px;
+  box-shadow: 5px 10px;
+  height: auto;
+  border-radius: 10%;
+}
+
+/* .intro-textdiv {
+  box-shadow: 5px 1px;
+} */
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 
 .form-item input,
 .form-item textarea {
@@ -1068,6 +1090,10 @@ img.page-img {
   border: 1px solid #ccc;
   outline: 0;
   font-size: 0.7rem;
+}
+
+.intro-text {
+  border-radius: 50px;
 }
 
 .form-item:last-child {
