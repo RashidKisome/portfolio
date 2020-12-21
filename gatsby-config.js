@@ -11,25 +11,26 @@ module.exports = {
       "Fresh",
       "themes",
       "blog",
-      "PWA", 
-      "disqus", 
-      "Google Analytics", 
-      "markdown", 
+      "PWA",
+      "disqus",
+      "Google Analytics",
+      "markdown",
       "code highlighting",
       "SEO",
       "social media",
       "sitemap",
-      "contact form"
+      "contact form",
     ],
+
     social: {
       twitter: ``,
       facebook: ``,
       github: ``,
       email: ``,
       linkedin: ``,
-      formspree: ''
+      formspree: "",
     },
-    image: '/fresh.png',
+    image: "/fresh.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -68,9 +69,9 @@ module.exports = {
           `gatsby-remark-images`,
           {
             resolve: `gatsby-remark-highlight-code`,
-          }
-        ]
-      }
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -86,17 +87,18 @@ module.exports = {
         exclude: ["/preview/**", "/do-not-track/me/too/"],
         // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 0,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `fresh`
-      }
+        shortname: `fresh`,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
+  pathPrefix: "/portfolio",
 }
